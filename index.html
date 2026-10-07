@@ -2597,5 +2597,2101 @@ iframe{
 
 })();
     </script>
+  <!-- =========================================================
+     CEREMONIAL GEMS — PART 4
+     PREMIUM PRODUCT CATALOGUE
+     Paste directly below PART 3
+     ========================================================= -->
+
+<script>
+(function(){
+
+  /* =========================================================
+     PART 4 CSS
+     ========================================================= */
+
+  const style = document.createElement("style");
+
+  style.id = "cg-part-4-style";
+
+  style.textContent = `
+
+  /* ---------- PRODUCT SECTION ---------- */
+
+  .cg-products{
+    position:relative;
+    overflow:hidden;
+    background:#f5f0e7;
+    padding:105px 0 115px;
+    color:#171511;
+  }
+
+  .cg-products-inner{
+    width:min(1240px,100%);
+    margin:auto;
+    padding:0 28px;
+  }
+
+
+  /* ---------- HEADER ---------- */
+
+  .cg-products-head{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:30px;
+    margin-bottom:38px;
+  }
+
+  .cg-products-label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:15px;
+    font-family:"DM Sans",sans-serif;
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:.2em;
+    color:#716b61;
+  }
+
+  .cg-products-label i{
+    display:block;
+    width:32px;
+    height:1px;
+    background:#171511;
+  }
+
+  .cg-products-title{
+    margin:0;
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:clamp(45px,6vw,80px);
+    line-height:.9;
+    letter-spacing:-.055em;
+    font-weight:500;
+  }
+
+  .cg-products-title em{
+    color:#236d42;
+    font-style:italic;
+  }
+
+  .cg-products-intro{
+    max-width:350px;
+    margin:0 0 3px;
+    font-family:"DM Sans",sans-serif;
+    font-size:12px;
+    line-height:1.7;
+    color:#716b62;
+  }
+
+
+  /* ---------- FILTER STRIP ---------- */
+
+  .cg-filter-strip{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    overflow-x:auto;
+    padding:5px 0 17px;
+    margin-bottom:20px;
+    scrollbar-width:none;
+  }
+
+  .cg-filter-strip::-webkit-scrollbar{
+    display:none;
+  }
+
+  .cg-filter-btn{
+    flex:0 0 auto;
+    min-height:39px;
+    padding:0 16px;
+    border:1px solid rgba(23,21,17,.16);
+    border-radius:999px;
+    background:rgba(255,255,255,.45);
+    color:#4e4941;
+    font-family:"DM Sans",sans-serif;
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.05em;
+    cursor:pointer;
+    transition:.25s ease;
+  }
+
+  .cg-filter-btn:hover{
+    background:#fff;
+  }
+
+  .cg-filter-btn.active{
+    background:#171511;
+    color:white;
+    border-color:#171511;
+  }
+
+
+  /* ---------- PRODUCT GRID ---------- */
+
+  .cg-product-grid{
+    display:grid;
+    grid-template-columns:
+      repeat(4,minmax(0,1fr));
+    gap:13px;
+  }
+
+  .cg-product-card{
+    position:relative;
+    min-width:0;
+    background:#fffdf9;
+    border-radius:23px;
+    overflow:hidden;
+    border:1px solid rgba(23,21,17,.07);
+    transition:
+      transform .4s cubic-bezier(.2,.8,.2,1),
+      box-shadow .4s ease;
+  }
+
+  .cg-product-card:hover{
+    transform:translateY(-7px);
+    box-shadow:
+      0 25px 55px rgba(23,21,17,.12);
+  }
+
+  .cg-product-card.cg-hidden{
+    display:none;
+  }
+
+
+  /* ---------- PRODUCT IMAGE AREA ---------- */
+
+  .cg-product-visual{
+    position:relative;
+    height:275px;
+    overflow:hidden;
+    isolation:isolate;
+  }
+
+  .cg-product-visual::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-3;
+  }
+
+  .cg-product-visual::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255,255,255,.5),
+        transparent 32%,
+        rgba(255,255,255,.08)
+      );
+    z-index:5;
+    pointer-events:none;
+  }
+
+
+  /* ---------- GEMSTONE VISUALS ---------- */
+
+  .cg-visual-ruby{
+    background:
+      radial-gradient(
+        circle at 50% 35%,
+        rgba(255,255,255,.65),
+        transparent 5%
+      ),
+      linear-gradient(
+        135deg,
+        #f6d5d7,
+        #f4b7c1 45%,
+        #e7a4ad
+      );
+  }
+
+  .cg-visual-emerald{
+    background:
+      radial-gradient(
+        circle at 42% 32%,
+        rgba(255,255,255,.7),
+        transparent 5%
+      ),
+      linear-gradient(
+        135deg,
+        #d9f1cf,
+        #b9dfb8 48%,
+        #9bcaa0
+      );
+  }
+
+  .cg-visual-sapphire{
+    background:
+      radial-gradient(
+        circle at 53% 28%,
+        rgba(255,255,255,.75),
+        transparent 5%
+      ),
+      linear-gradient(
+        135deg,
+        #d6e8f7,
+        #a9cae7 50%,
+        #8fb4d7
+      );
+  }
+
+  .cg-visual-yellow{
+    background:
+      radial-gradient(
+        circle at 45% 30%,
+        rgba(255,255,255,.75),
+        transparent 5%
+      ),
+      linear-gradient(
+        135deg,
+        #fff2b0,
+        #f5d66e 50%,
+        #e7b93c
+      );
+  }
+
+  .cg-visual-pink{
+    background:
+      radial-gradient(
+        circle at 55% 32%,
+        rgba(255,255,255,.75),
+        transparent 5%
+      ),
+      linear-gradient(
+        135deg,
+        #fbe2e8,
+        #f4c0cf 50%,
+        #e7a1b7
+      );
+  }
+
+  .cg-visual-purple{
+    background:
+      radial-gradient(
+        circle at 45% 30%,
+        rgba(255,255,255,.7),
+        transparent 5%
+      ),
+      linear-gradient(
+        135deg,
+        #eadff5,
+        #cbb2dc 50%,
+        #ae8ac6
+      );
+  }
+
+  .cg-visual-opal{
+    background:
+      radial-gradient(
+        circle at 30% 35%,
+        rgba(255,122,180,.5),
+        transparent 17%
+      ),
+      radial-gradient(
+        circle at 70% 55%,
+        rgba(74,176,255,.55),
+        transparent 18%
+      ),
+      linear-gradient(
+        135deg,
+        #f5e9e4,
+        #ddd8ee,
+        #bde4e0
+      );
+  }
+
+  .cg-visual-tourmaline{
+    background:
+      radial-gradient(
+        circle at 40% 35%,
+        rgba(255,166,74,.55),
+        transparent 15%
+      ),
+      radial-gradient(
+        circle at 70% 60%,
+        rgba(196,55,113,.45),
+        transparent 20%
+      ),
+      linear-gradient(
+        135deg,
+        #ead5d5,
+        #d9b2c2,
+        #bfa4c9
+      );
+  }
+
+
+  /* ---------- ARTIFICIAL GEM ---------- */
+
+  .cg-gemstone{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:112px;
+    height:112px;
+    transform:
+      translate(-50%,-45%)
+      rotate(42deg);
+    z-index:3;
+    border-radius:
+      16% 84% 60% 40%;
+    box-shadow:
+      inset -15px -20px 25px rgba(0,0,0,.18),
+      inset 12px 10px 18px rgba(255,255,255,.55),
+      0 25px 38px rgba(0,0,0,.2);
+    transition:
+      transform .6s cubic-bezier(.2,.8,.2,1);
+  }
+
+  .cg-product-card:hover
+  .cg-gemstone{
+    transform:
+      translate(-50%,-48%)
+      rotate(49deg)
+      scale(1.09);
+  }
+
+  .cg-gemstone::before{
+    content:"";
+    position:absolute;
+    inset:11%;
+    border-radius:inherit;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255,255,255,.82),
+        transparent 32%
+      );
+  }
+
+  .cg-gemstone::after{
+    content:"";
+    position:absolute;
+    width:35%;
+    height:35%;
+    left:10%;
+    top:11%;
+    border-radius:50%;
+    background:rgba(255,255,255,.45);
+    filter:blur(5px);
+  }
+
+
+  /* INDIVIDUAL GEM COLOURS */
+
+  .cg-gem-ruby{
+    background:
+      linear-gradient(
+        135deg,
+        #ff718b,
+        #d71d48 45%,
+        #740b27
+      );
+  }
+
+  .cg-gem-emerald{
+    background:
+      linear-gradient(
+        135deg,
+        #9df274,
+        #20894a 43%,
+        #064529
+      );
+  }
+
+  .cg-gem-sapphire{
+    background:
+      linear-gradient(
+        135deg,
+        #aeeaff,
+        #3979d0 44%,
+        #122a65
+      );
+  }
+
+  .cg-gem-yellow{
+    background:
+      linear-gradient(
+        135deg,
+        #fff6a0,
+        #e9b41e 45%,
+        #8f5d00
+      );
+  }
+
+  .cg-gem-pink{
+    background:
+      linear-gradient(
+        135deg,
+        #ffd1e0,
+        #e37b9f 42%,
+        #9c365f
+      );
+  }
+
+  .cg-gem-purple{
+    background:
+      linear-gradient(
+        135deg,
+        #e9cfff,
+        #9d69c5 45%,
+        #56346f
+      );
+  }
+
+  .cg-gem-opal{
+    background:
+      linear-gradient(
+        135deg,
+        #fff6f0,
+        #a8e5df 34%,
+        #db7bb4 63%,
+        #82a9ee
+      );
+  }
+
+  .cg-gem-tourmaline{
+    background:
+      linear-gradient(
+        135deg,
+        #ffd16d,
+        #e94e73 40%,
+        #723b99 76%
+      );
+  }
+
+
+  /* ---------- BADGE ---------- */
+
+  .cg-product-badge{
+    position:absolute;
+    top:14px;
+    left:14px;
+    z-index:10;
+    padding:7px 10px;
+    border-radius:999px;
+    background:rgba(255,255,255,.78);
+    backdrop-filter:blur(10px);
+    font-family:"DM Sans",sans-serif;
+    font-size:7px;
+    font-weight:900;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+  }
+
+
+  /* ---------- WISHLIST ---------- */
+
+  .cg-product-heart{
+    position:absolute;
+    top:12px;
+    right:12px;
+    z-index:10;
+    width:38px;
+    height:38px;
+    border:0;
+    border-radius:50%;
+    background:rgba(255,255,255,.76);
+    backdrop-filter:blur(10px);
+    color:#171511;
+    font-size:18px;
+    line-height:1;
+    cursor:pointer;
+    transition:.25s ease;
+  }
+
+  .cg-product-heart:hover{
+    transform:scale(1.08);
+  }
+
+  .cg-product-heart.active{
+    color:#d61e43;
+    background:white;
+  }
+
+
+  /* ---------- PRODUCT INFO ---------- */
+
+  .cg-product-info{
+    padding:18px 17px 17px;
+  }
+
+  .cg-product-type{
+    margin-bottom:7px;
+    font-family:"DM Sans",sans-serif;
+    font-size:7px;
+    font-weight:900;
+    letter-spacing:.17em;
+    text-transform:uppercase;
+    color:#8b8479;
+  }
+
+  .cg-product-name{
+    margin:0;
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:25px;
+    line-height:1;
+    font-weight:500;
+    letter-spacing:-.03em;
+  }
+
+  .cg-product-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-top:10px;
+    font-family:"DM Sans",sans-serif;
+    font-size:8px;
+    color:#777066;
+  }
+
+  .cg-product-meta span{
+    padding-right:7px;
+    border-right:1px solid #ddd5ca;
+  }
+
+  .cg-product-meta span:last-child{
+    border:0;
+  }
+
+  .cg-product-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    margin-top:18px;
+  }
+
+  .cg-product-price small{
+    display:block;
+    margin-bottom:3px;
+    font-family:"DM Sans",sans-serif;
+    font-size:7px;
+    font-weight:700;
+    color:#9a9389;
+  }
+
+  .cg-product-price strong{
+    font-family:"DM Sans",sans-serif;
+    font-size:15px;
+    font-weight:900;
+  }
+
+  .cg-add-button{
+    min-height:38px;
+    padding:0 14px;
+    border:0;
+    border-radius:999px;
+    background:#171511;
+    color:white;
+    cursor:pointer;
+    font-family:"DM Sans",sans-serif;
+    font-size:8px;
+    font-weight:900;
+    letter-spacing:.04em;
+    transition:.25s ease;
+  }
+
+  .cg-add-button:hover{
+    transform:translateY(-2px);
+    box-shadow:
+      0 8px 20px rgba(0,0,0,.18);
+  }
+
+  .cg-add-button.added{
+    background:#236d42;
+  }
+
+
+  /* ---------- QUICK VIEW ---------- */
+
+  .cg-quick-view{
+    position:absolute;
+    left:12px;
+    right:12px;
+    bottom:12px;
+    z-index:12;
+    min-height:42px;
+    border:0;
+    border-radius:999px;
+    background:rgba(23,21,17,.88);
+    color:white;
+    font-family:"DM Sans",sans-serif;
+    font-size:8px;
+    font-weight:900;
+    letter-spacing:.08em;
+    cursor:pointer;
+    opacity:0;
+    transform:translateY(10px);
+    transition:.3s ease;
+  }
+
+  .cg-product-card:hover
+  .cg-quick-view{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+
+  /* ---------- CATALOGUE NOTE ---------- */
+
+  .cg-catalogue-note{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    margin-top:30px;
+    padding:18px 20px;
+    border-top:1px solid rgba(23,21,17,.12);
+    border-bottom:1px solid rgba(23,21,17,.12);
+  }
+
+  .cg-catalogue-note p{
+    margin:0;
+    font-family:"DM Sans",sans-serif;
+    font-size:10px;
+    line-height:1.6;
+    color:#716b62;
+  }
+
+  .cg-catalogue-note strong{
+    color:#171511;
+  }
+
+  .cg-catalogue-count{
+    flex:0 0 auto;
+    font-family:"DM Sans",sans-serif;
+    font-size:9px;
+    font-weight:900;
+  }
+
+
+  /* ---------- TOAST ---------- */
+
+  .cg-product-toast{
+    position:fixed;
+    left:50%;
+    bottom:24px;
+    z-index:99999;
+    transform:
+      translate(-50%,20px);
+    min-width:250px;
+    max-width:calc(100% - 30px);
+    padding:13px 17px;
+    border-radius:999px;
+    background:#171511;
+    color:white;
+    text-align:center;
+    font-family:"DM Sans",sans-serif;
+    font-size:9px;
+    font-weight:800;
+    box-shadow:
+      0 15px 40px rgba(0,0,0,.2);
+    opacity:0;
+    pointer-events:none;
+    transition:.3s ease;
+  }
+
+  .cg-product-toast.show{
+    opacity:1;
+    transform:
+      translate(-50%,0);
+  }
+
+
+  /* ---------- RESPONSIVE ---------- */
+
+  @media(max-width:950px){
+
+    .cg-product-grid{
+      grid-template-columns:
+        repeat(2,minmax(0,1fr));
+    }
+
+    .cg-product-visual{
+      height:290px;
+    }
+
+  }
+
+
+  @media(max-width:600px){
+
+    .cg-products{
+      padding:78px 0 82px;
+    }
+
+    .cg-products-inner{
+      padding:0 18px;
+    }
+
+    .cg-products-head{
+      display:block;
+      margin-bottom:28px;
+    }
+
+    .cg-products-title{
+      font-size:
+        clamp(44px,13vw,65px);
+    }
+
+    .cg-products-intro{
+      margin-top:18px;
+      font-size:11px;
+    }
+
+    .cg-filter-strip{
+      margin-bottom:15px;
+    }
+
+    .cg-filter-btn{
+      min-height:36px;
+      padding:0 13px;
+      font-size:8px;
+    }
+
+    .cg-product-grid{
+      grid-template-columns:
+        repeat(2,minmax(0,1fr));
+      gap:9px;
+    }
+
+    .cg-product-card{
+      border-radius:18px;
+    }
+
+    .cg-product-visual{
+      height:205px;
+    }
+
+    .cg-gemstone{
+      width:77px;
+      height:77px;
+    }
+
+    .cg-product-badge{
+      top:9px;
+      left:9px;
+      padding:6px 7px;
+      font-size:6px;
+    }
+
+    .cg-product-heart{
+      top:8px;
+      right:8px;
+      width:32px;
+      height:32px;
+      font-size:15px;
+    }
+
+    .cg-product-info{
+      padding:14px 12px 13px;
+    }
+
+    .cg-product-type{
+      font-size:6px;
+      margin-bottom:6px;
+    }
+
+    .cg-product-name{
+      font-size:20px;
+    }
+
+    .cg-product-meta{
+      gap:4px;
+      margin-top:8px;
+      font-size:6.5px;
+    }
+
+    .cg-product-meta span{
+      padding-right:5px;
+    }
+
+    .cg-product-bottom{
+      display:block;
+      margin-top:14px;
+    }
+
+    .cg-product-price strong{
+      font-size:13px;
+    }
+
+    .cg-add-button{
+      width:100%;
+      margin-top:10px;
+      min-height:36px;
+    }
+
+    .cg-quick-view{
+      display:none;
+    }
+
+    .cg-catalogue-note{
+      display:block;
+      margin-top:22px;
+    }
+
+    .cg-catalogue-count{
+      display:block;
+      margin-top:9px;
+    }
+
+  }
+
+  `;
+
+  document.head.appendChild(style);
+
+
+  /* =========================================================
+     PRODUCT DATA
+     ========================================================= */
+
+  const products = [
+
+    {
+      id:"ruby-001",
+      category:"Ruby",
+      type:"Natural Ruby",
+      name:"Ruby / Manik",
+      carat:"2.16 ct",
+      origin:"Myanmar",
+      cut:"Oval",
+      price:"₹38,500",
+      visual:"cg-visual-ruby",
+      gem:"cg-gem-ruby",
+      badge:"Rare Colour"
+    },
+
+    {
+      id:"emerald-001",
+      category:"Emerald",
+      type:"Natural Emerald",
+      name:"Emerald / Panna",
+      carat:"3.12 ct",
+      origin:"Colombia",
+      cut:"Octagon",
+      price:"₹42,900",
+      visual:"cg-visual-emerald",
+      gem:"cg-gem-emerald",
+      badge:"Collector"
+    },
+
+    {
+      id:"sapphire-001",
+      category:"Blue Sapphire",
+      type:"Natural Sapphire",
+      name:"Blue Sapphire / Neelam",
+      carat:"5.08 ct",
+      origin:"Sri Lanka",
+      cut:"Oval",
+      price:"₹46,800",
+      visual:"cg-visual-sapphire",
+      gem:"cg-gem-sapphire",
+      badge:"Featured"
+    },
+
+    {
+      id:"yellow-001",
+      category:"Yellow Sapphire",
+      type:"Natural Sapphire",
+      name:"Yellow Sapphire / Pukhraj",
+      carat:"4.60 ct",
+      origin:"Sri Lanka",
+      cut:"Oval",
+      price:"₹29,500",
+      visual:"cg-visual-yellow",
+      gem:"cg-gem-yellow",
+      badge:"Classic"
+    },
+
+    {
+      id:"pink-001",
+      category:"Pink Sapphire",
+      type:"Natural Sapphire",
+      name:"Pink Sapphire",
+      carat:"2.04 ct",
+      origin:"Sri Lanka",
+      cut:"Cushion",
+      price:"₹34,900",
+      visual:"cg-visual-pink",
+      gem:"cg-gem-pink",
+      badge:"New"
+    },
+
+    {
+      id:"tanzanite-001",
+      category:"Tanzanite",
+      type:"Natural Tanzanite",
+      name:"Tanzanite",
+      carat:"3.85 ct",
+      origin:"Tanzania",
+      cut:"Oval",
+      price:"₹27,500",
+      visual:"cg-visual-purple",
+      gem:"cg-gem-purple",
+      badge:"Rare"
+    },
+
+    {
+      id:"opal-001",
+      category:"Opal",
+      type:"Natural Opal",
+      name:"Ethiopian Opal",
+      carat:"8.48 ct",
+      origin:"Ethiopia",
+      cut:"Cabochon",
+      price:"₹25,400",
+      visual:"cg-visual-opal",
+      gem:"cg-gem-opal",
+      badge:"Play of Colour"
+    },
+
+    {
+      id:"tourmaline-001",
+      category:"Tourmaline",
+      type:"Natural Tourmaline",
+      name:"Tourmaline",
+      carat:"3.44 ct",
+      origin:"Tanzania",
+      cut:"Oval",
+      price:"₹31,900",
+      visual:"cg-visual-tourmaline",
+      gem:"cg-gem-tourmaline",
+      badge:"One of One"
+    }
+
+  ];
+
+
+  /* =========================================================
+     PRODUCT HTML
+     ========================================================= */
+
+  const section =
+    document.createElement("section");
+
+  section.className =
+    "cg-products";
+
+  section.id =
+    "products";
+
+
+  section.innerHTML = `
+
+    <div class="cg-products-inner">
+
+      <div class="cg-products-head">
+
+        <div>
+
+          <div class="cg-products-label">
+            <i></i>
+            THE GEM VAULT
+          </div>
+
+          <h2 class="cg-products-title">
+            Selected
+            <em>stones.</em>
+          </h2>
+
+        </div>
+
+        <p class="cg-products-intro">
+          A curated selection of colourful natural
+          gemstones. Every stone shown here is a
+          prototype listing and can be replaced with
+          the client's actual inventory later.
+        </p>
+
+      </div>
+
+
+      <div class="cg-filter-strip">
+
+        <button
+          type="button"
+          class="cg-filter-btn active"
+          data-filter="All">
+          All Stones
+        </button>
+
+        <button
+          type="button"
+          class="cg-filter-btn"
+          data-filter="Ruby">
+          Ruby
+        </button>
+
+        <button
+          type="button"
+          class="cg-filter-btn"
+          data-filter="Emerald">
+          Emerald
+        </button>
+
+        <button
+          type="button"
+          class="cg-filter-btn"
+          data-filter="Blue Sapphire">
+          Sapphire
+        </button>
+
+        <button
+          type="button"
+          class="cg-filter-btn"
+          data-filter="Yellow Sapphire">
+          Pukhraj
+        </button>
+
+        <button
+          type="button"
+          class="cg-filter-btn"
+          data-filter="Pink Sapphire">
+          Pink
+        </button>
+
+        <button
+          type="button"
+          class="cg-filter-btn"
+          data-filter="Tourmaline">
+          Tourmaline
+        </button>
+
+        <button
+          type="button"
+          class="cg-filter-btn"
+          data-filter="Tanzanite">
+          Tanzanite
+        </button>
+
+        <button
+          type="button"
+          class="cg-filter-btn"
+          data-filter="Opal">
+          Opal
+        </button>
+
+      </div>
+
+
+      <div
+        class="cg-product-grid"
+        id="cgProductGrid">
+      </div>
+
+
+      <div class="cg-catalogue-note">
+
+        <p>
+          <strong>Prototype catalogue.</strong>
+          Prices, origin, carat and availability
+          can be updated from the final admin panel.
+        </p>
+
+        <span
+          class="cg-catalogue-count"
+          id="cgCatalogueCount">
+          8 STONES
+        </span>
+
+      </div>
+
+    </div>
+
+  `;
+
+
+  /* =========================================================
+     PRODUCT CARD RENDER
+     ================================
+     <script>
+(function(){
+
+  const grid = document.getElementById("cgProductGrid");
+  const count = document.getElementById("cgCatalogueCount");
+
+  if(!grid) return;
+
+  const products = [
+    {
+      id:"ruby-manik",
+      name:"Ruby / Manik",
+      type:"Natural Ruby",
+      carat:"2.16 ct",
+      origin:"Myanmar",
+      cut:"Oval",
+      price:38500,
+      badge:"Rare Red",
+      color:"ruby"
+    },
+    {
+      id:"emerald-panna",
+      name:"Emerald / Panna",
+      type:"Natural Emerald",
+      carat:"3.12 ct",
+      origin:"Colombia",
+      cut:"Octagon",
+      price:42900,
+      badge:"Vivid Green",
+      color:"emerald"
+    },
+    {
+      id:"blue-sapphire",
+      name:"Blue Sapphire / Neelam",
+      type:"Natural Sapphire",
+      carat:"5.08 ct",
+      origin:"Sri Lanka",
+      cut:"Oval",
+      price:46800,
+      badge:"Deep Blue",
+      color:"blue"
+    },
+    {
+      id:"yellow-sapphire",
+      name:"Yellow Sapphire / Pukhraj",
+      type:"Natural Sapphire",
+      carat:"4.60 ct",
+      origin:"Sri Lanka",
+      cut:"Oval",
+      price:29500,
+      badge:"Golden Glow",
+      color:"yellow"
+    },
+    {
+      id:"pink-sapphire",
+      name:"Pink Sapphire",
+      type:"Natural Sapphire",
+      carat:"2.04 ct",
+      origin:"Sri Lanka",
+      cut:"Cushion",
+      price:34900,
+      badge:"Soft Pink",
+      color:"pink"
+    },
+    {
+      id:"tanzanite",
+      name:"Tanzanite",
+      type:"Natural Tanzanite",
+      carat:"3.85 ct",
+      origin:"Tanzania",
+      cut:"Oval",
+      price:27500,
+      badge:"Blue Violet",
+      color:"purple"
+    },
+    {
+      id:"ethiopian-opal",
+      name:"Ethiopian Opal",
+      type:"Natural Opal",
+      carat:"8.48 ct",
+      origin:"Ethiopia",
+      cut:"Cabochon",
+      price:25400,
+      badge:"Play Of Colour",
+      color:"opal"
+    },
+    {
+      id:"tourmaline",
+      name:"Tourmaline",
+      type:"Natural Tourmaline",
+      carat:"3.44 ct",
+      origin:"Tanzania",
+      cut:"Oval",
+      price:31900,
+      badge:"Vivid Colour",
+      color:"tourmaline"
+    }
+  ];
+
+  function money(n){
+    return "₹" + n.toLocaleString("en-IN");
+  }
+
+  function gemVisual(color){
+
+    const gradients = {
+      ruby:"radial-gradient(circle at 30% 25%,#ffb0b0 0%,#ef3f54 24%,#a50027 52%,#3d0011 100%)",
+      emerald:"radial-gradient(circle at 30% 20%,#b8ffd8 0%,#27e27c 23%,#008f55 53%,#003d2b 100%)",
+      blue:"radial-gradient(circle at 30% 20%,#a9eaff 0%,#218cff 25%,#1647c7 56%,#071542 100%)",
+      yellow:"radial-gradient(circle at 30% 20%,#fff5a5 0%,#ffd52d 28%,#e29a00 57%,#704200 100%)",
+      pink:"radial-gradient(circle at 30% 20%,#ffe0ed 0%,#ff83b8 27%,#dc397b 58%,#68143d 100%)",
+      purple:"radial-gradient(circle at 30% 20%,#e6d0ff 0%,#a875ff 28%,#6841c6 57%,#281354 100%)",
+      opal:"radial-gradient(circle at 30% 20%,#fff 0%,#9df7e8 22%,#8caeff 42%,#ff8ed7 63%,#fff0a0 100%)",
+      tourmaline:"radial-gradient(circle at 30% 20%,#d9ffd9 0%,#48e97b 22%,#00a877 45%,#17366c 78%,#160f39 100%)"
+    };
+
+    return `
+      <div class="cg-gem-visual" style="--gem:${gradients[color] || gradients.ruby}">
+        <span class="cg-gem-glow"></span>
+        <span class="cg-gem-shape"></span>
+        <span class="cg-gem-highlight"></span>
+      </div>
+    `;
+  }
+
+  function card(p){
+
+    return `
+      <article class="cg-product-card"
+        data-id="${p.id}"
+        data-category="${p.name.toLowerCase()}"
+        data-name="${p.name.toLowerCase()}"
+        data-origin="${p.origin.toLowerCase()}"
+        data-price="${p.price}">
+
+        <div class="cg-product-media">
+
+          ${gemVisual(p.color)}
+
+          <span class="cg-product-badge">
+            ${p.badge}
+          </span>
+
+          <button
+            class="cg-product-heart"
+            type="button"
+            aria-label="Add ${p.name} to wishlist">
+            ♡
+          </button>
+
+          <div class="cg-product-overlay">
+            <button
+              class="cg-quick-view"
+              type="button"
+              data-id="${p.id}">
+              Quick View
+            </button>
+          </div>
+
+        </div>
+
+        <div class="cg-product-info">
+
+          <div class="cg-product-type">
+            ${p.type}
+          </div>
+
+          <h3 class="cg-product-name">
+            ${p.name}
+          </h3>
+
+          <div class="cg-product-meta">
+            <span>${p.carat}</span>
+            <span>${p.origin}</span>
+            <span>${p.cut}</span>
+          </div>
+
+          <div class="cg-product-bottom">
+
+            <div>
+              <small>Demo Price</small>
+              <strong>${money(p.price)}</strong>
+            </div>
+
+            <button
+              class="cg-add-bag"
+              type="button"
+              data-id="${p.id}">
+              Add to Bag
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+    `;
+  }
+
+  function render(list){
+
+    grid.innerHTML = list.map(card).join("");
+
+    if(count){
+      count.textContent =
+        list.length + (list.length === 1 ? " STONE" : " STONES");
+    }
+
+    bindCards();
+  }
+
+  function bindCards(){
+
+    document.querySelectorAll(".cg-product-heart").forEach(btn=>{
+      btn.onclick=function(){
+
+        this.classList.toggle("active");
+
+        this.textContent =
+          this.classList.contains("active") ? "♥" : "♡";
+
+        toast(
+          this.classList.contains("active")
+          ? "Added to wishlist"
+          : "Removed from wishlist"
+        );
+      };
+    });
+
+    document.querySelectorAll(".cg-add-bag").forEach(btn=>{
+      btn.onclick=function(){
+
+        const p =
+          products.find(x=>x.id===this.dataset.id);
+
+        if(!p) return;
+
+        this.textContent="Added ✓";
+
+        toast(p.name + " added to your bag");
+
+        setTimeout(()=>{
+          this.textContent="Add to Bag";
+        },1600);
+      };
+    });
+
+    document.querySelectorAll(".cg-quick-view").forEach(btn=>{
+      btn.onclick=function(){
+
+        const p =
+          products.find(x=>x.id===this.dataset.id);
+
+        if(p){
+          openQuickView(p);
+        }
+      };
+    });
+
+  }
+
+  function toast(message){
+
+    let t=document.getElementById("cgToast");
+
+    if(!t){
+
+      t=document.createElement("div");
+
+      t.id="cgToast";
+
+      t.innerHTML=`
+        <span class="cg-toast-dot"></span>
+        <span class="cg-toast-text"></span>
+      `;
+
+      document.body.appendChild(t);
+    }
+
+    t.querySelector(".cg-toast-text").textContent=message;
+
+    t.classList.add("show");
+
+    clearTimeout(window.cgToastTimer);
+
+    window.cgToastTimer=setTimeout(()=>{
+      t.classList.remove("show");
+    },2200);
+  }
+
+  function openQuickView(p){
+
+    let modal=document.getElementById("cgQuickModal");
+
+    if(!modal){
+
+      modal=document.createElement("div");
+
+      modal.id="cgQuickModal";
+
+      modal.innerHTML=`
+        <div class="cg-modal-backdrop"></div>
+
+        <div class="cg-modal-box">
+
+          <button
+            class="cg-modal-close"
+            type="button"
+            aria-label="Close">
+            ×
+          </button>
+
+          <div class="cg-modal-content"></div>
+
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+
+      modal.querySelector(".cg-modal-backdrop")
+        .onclick=()=>closeModal();
+
+      modal.querySelector(".cg-modal-close")
+        .onclick=()=>closeModal();
+    }
+
+    modal.querySelector(".cg-modal-content").innerHTML=`
+
+      <div class="cg-modal-visual">
+        ${gemVisual(p.color)}
+      </div>
+
+      <div class="cg-modal-details">
+
+        <span class="cg-modal-kicker">
+          ${p.badge}
+        </span>
+
+        <h2>${p.name}</h2>
+
+        <p class="cg-modal-type">
+          ${p.type}
+        </p>
+
+        <div class="cg-modal-price">
+          ${money(p.price)}
+          <small>Demo Price</small>
+        </div>
+
+        <div class="cg-modal-specs">
+
+          <div>
+            <small>Carat</small>
+            <strong>${p.carat}</strong>
+          </div>
+
+          <div>
+            <small>Origin</small>
+            <strong>${p.origin}</strong>
+          </div>
+
+          <div>
+            <small>Cut</small>
+            <strong>${p.cut}</strong>
+          </div>
+
+        </div>
+
+        <p class="cg-modal-description">
+          A carefully presented natural gemstone selected
+          for colour, character and visual presence.
+          Final stone details and certification can be
+          updated from the final catalogue.
+        </p>
+
+        <div class="cg-modal-actions">
+
+          <button
+            class="cg-modal-bag"
+            type="button"
+            data-id="${p.id}">
+            Add to Bag
+          </button>
+
+          <button
+            class="cg-modal-close-secondary"
+            type="button">
+            Continue Browsing
+          </button>
+
+        </div>
+
+      </div>
+    `;
+
+    modal.classList.add("open");
+
+    document.body.classList.add("cg-modal-open");
+
+    modal.querySelector(".cg-modal-close-secondary")
+      .onclick=()=>closeModal();
+
+    modal.querySelector(".cg-modal-bag")
+      .onclick=function(){
+
+        this.textContent="Added ✓";
+
+        toast(p.name+" added to your bag");
+
+        setTimeout(()=>{
+          this.textContent="Add to Bag";
+        },1500);
+      };
+  }
+
+  function closeModal(){
+
+    const modal=document.getElementById("cgQuickModal");
+
+    if(modal){
+      modal.classList.remove("open");
+    }
+
+    document.body.classList.remove("cg-modal-open");
+  }
+
+  render(products);
+
+  /* -----------------------------
+     STYLES
+  ----------------------------- */
+
+  const style=document.createElement("style");
+
+  style.textContent=`
+
+    .cg-product-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+    }
+
+    .cg-product-card{
+      position:relative;
+      min-width:0;
+      background:#fff;
+      border:1px solid rgba(22,20,18,.08);
+      border-radius:22px;
+      overflow:hidden;
+      transition:
+        transform .45s cubic-bezier(.2,.8,.2,1),
+        box-shadow .45s ease;
+    }
+
+    .cg-product-card:hover{
+      transform:translateY(-7px);
+      box-shadow:0 24px 55px rgba(50,35,20,.12);
+    }
+
+    .cg-product-media{
+      position:relative;
+      height:220px;
+      overflow:hidden;
+      background:#f6f1e8;
+    }
+
+    .cg-gem-visual{
+      position:absolute;
+      inset:0;
+      display:grid;
+      place-items:center;
+      background:
+        radial-gradient(circle at 50% 50%,
+        rgba(255,255,255,.95),
+        rgba(245,239,228,.8) 65%,
+        rgba(229,220,205,.8));
+      overflow:hidden;
+    }
+
+    .cg-gem-shape{
+      width:92px;
+      height:112px;
+      border-radius:44% 56% 48% 52%;
+      background:var(--gem);
+      transform:
+        rotate(13deg)
+        skewY(-4deg);
+      box-shadow:
+        inset -18px -18px 25px rgba(0,0,0,.18),
+        inset 14px 14px 22px rgba(255,255,255,.42),
+        0 20px 38px rgba(0,0,0,.20);
+      clip-path:polygon(
+        50% 0%,
+        82% 16%,
+        100% 52%,
+        68% 100%,
+        31% 93%,
+        0% 50%,
+        18% 15%
+      );
+      animation:cgGemFloat 5s ease-in-out infinite;
+    }
+
+    .cg-gem-highlight{
+      position:absolute;
+      width:35px;
+      height:80px;
+      border-radius:50%;
+      background:rgba(255,255,255,.46);
+      filter:blur(8px);
+      transform:
+        translate(-22px,-18px)
+        rotate(18deg);
+      pointer-events:none;
+    }
+
+    .cg-gem-glow{
+      position:absolute;
+      width:170px;
+      height:170px;
+      border-radius:50%;
+      background:rgba(255,255,255,.28);
+      filter:blur(25px);
+    }
+
+    @keyframes cgGemFloat{
+      0%,100%{
+        transform:
+          translateY(0)
+          rotate(13deg)
+          skewY(-4deg);
+      }
+
+      50%{
+        transform:
+          translateY(-8px)
+          rotate(18deg)
+          skewY(-4deg);
+      }
+    }
+
+    .cg-product-badge{
+      position:absolute;
+      top:12px;
+      left:12px;
+      padding:6px 9px;
+      border-radius:999px;
+      background:rgba(255,255,255,.82);
+      backdrop-filter:blur(10px);
+      font-size:9px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#26211d;
+    }
+
+    .cg-product-heart{
+      position:absolute;
+      right:10px;
+      top:10px;
+      width:36px;
+      height:36px;
+      border:1px solid rgba(255,255,255,.65);
+      border-radius:50%;
+      background:rgba(255,255,255,.72);
+      backdrop-filter:blur(10px);
+      font-size:18px;
+      cursor:pointer;
+      transition:.25s ease;
+      z-index:3;
+    }
+
+    .cg-product-heart.active{
+      background:#201b18;
+      color:#fff;
+      transform:scale(1.08);
+    }
+
+    .cg-product-overlay{
+      position:absolute;
+      inset:auto 10px 10px;
+      display:flex;
+      justify-content:center;
+      transform:translateY(65px);
+      opacity:0;
+      transition:.35s ease;
+      z-index:4;
+    }
+
+    .cg-product-card:hover .cg-product-overlay{
+      transform:translateY(0);
+      opacity:1;
+    }
+
+    .cg-quick-view{
+      width:100%;
+      border:0;
+      padding:12px;
+      border-radius:14px;
+      background:#1e1a17;
+      color:#fff;
+      font-size:12px;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    .cg-product-info{
+      padding:16px 14px 15px;
+    }
+
+    .cg-product-type{
+      font-size:9px;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:#8a8177;
+      font-weight:800;
+    }
+
+    .cg-product-name{
+      margin:6px 0 9px;
+      font-family:"Playfair Display",serif;
+      font-size:18px;
+      line-height:1.1;
+      color:#201b18;
+    }
+
+    .cg-product-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:5px;
+      margin-bottom:15px;
+    }
+
+    .cg-product-meta span{
+      padding:5px 7px;
+      border-radius:8px;
+      background:#f7f3ec;
+      color:#6d655d;
+      font-size:9px;
+      font-weight:700;
+    }
+
+    .cg-product-bottom{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:8px;
+    }
+
+    .cg-product-bottom small{
+      display:block;
+      color:#999087;
+      font-size:8px;
+      margin-bottom:3px;
+    }
+
+    .cg-product-bottom strong{
+      display:block;
+      font-size:15px;
+      color:#1f1a17;
+    }
+
+    .cg-add-bag{
+      border:0;
+      border-radius:12px;
+      padding:10px 11px;
+      background:#e7b72b;
+      color:#1b1713;
+      font-size:10px;
+      font-weight:900;
+      cursor:pointer;
+      transition:.25s ease;
+      white-space:nowrap;
+    }
+
+    .cg-add-bag:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 22px rgba(214,164,31,.25);
+    }
+
+    #cgToast{
+      position:fixed;
+      left:50%;
+      bottom:22px;
+      z-index:99999;
+      transform:
+        translate(-50%,25px)
+        scale(.96);
+      opacity:0;
+      pointer-events:none;
+      display:flex;
+      align-items:center;
+      gap:9px;
+      padding:12px 16px;
+      border-radius:999px;
+      background:#201b18;
+      color:#fff;
+      box-shadow:0 15px 35px rgba(0,0,0,.22);
+      transition:.35s ease;
+      font-size:12px;
+      font-weight:700;
+      white-space:nowrap;
+    }
+
+    #cgToast.show{
+      transform:
+        translate(-50%,0)
+        scale(1);
+      opacity:1;
+    }
+
+    .cg-toast-dot{
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:#e9bd31;
+      box-shadow:0 0 0 5px rgba(233,189,49,.12);
+    }
+
+    #cgQuickModal{
+      position:fixed;
+      inset:0;
+      z-index:99990;
+      display:grid;
+      place-items:center;
+      padding:18px;
+      opacity:0;
+      visibility:hidden;
+      transition:.35s ease;
+    }
+
+    #cgQuickModal.open{
+      opacity:1;
+      visibility:visible;
+    }
+
+    .cg-modal-backdrop{
+      position:absolute;
+      inset:0;
+      background:rgba(22,18,15,.48);
+      backdrop-filter:blur(10px);
+    }
+
+    .cg-modal-box{
+      position:relative;
+      width:min(920px,100%);
+      max-height:92vh;
+      overflow:auto;
+      border-radius:28px;
+      background:#fffdf9;
+      box-shadow:0 35px 100px rgba(0,0,0,.3);
+      transform:translateY(25px) scale(.97);
+      transition:.4s ease;
+    }
+
+    #cgQuickModal.open .cg-modal-box{
+      transform:translateY(0) scale(1);
+    }
+
+    .cg-modal-close{
+      position:absolute;
+      right:13px;
+      top:13px;
+      width:42px;
+      height:42px;
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:50%;
+      background:rgba(255,255,255,.86);
+      font-size:26px;
+      line-height:1;
+      cursor:pointer;
+      z-index:5;
+    }
+
+    .cg-modal-content{
+      display:grid;
+      grid-template-columns:1fr;
+    }
+
+    .cg-modal-visual{
+      min-height:330px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .cg-modal-visual .cg-gem-shape{
+      width:150px;
+      height:180px;
+    }
+
+    .cg-modal-details{
+      padding:28px 22px 24px;
+    }
+
+    .cg-modal-kicker{
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:#9b7a22;
+    }
+
+    .cg-modal-details h2{
+      margin:8px 0 4px;
+      font-family:"Playfair Display",serif;
+      font-size:34px;
+      line-height:1;
+    }
+
+    .cg-modal-type{
+      margin:0;
+      color:#81776d;
+      font-size:13px;
+    }
+
+    .cg-modal-price{
+      margin:24px 0 20px;
+      font-size:25px;
+      font-weight:900;
+    }
+
+    .cg-modal-price small{
+      display:block;
+      margin-top:4px;
+      font-size:9px;
+      color:#9b9188;
+      font-weight:700;
+    }
+
+    .cg-modal-specs{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:8px;
+    }
+
+    .cg-modal-specs div{
+      padding:12px;
+      border-radius:14px;
+      background:#f6f1e9;
+    }
+
+    .cg-modal-specs small{
+      display:block;
+      color:#948a80;
+      font-size:8px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin-bottom:4px;
+    }
+
+    .cg-modal-specs strong{
+      font-size:11px;
+    }
+
+    .cg-modal-description{
+      margin:20px 0;
+      color:#6d655d;
+      font-size:12px;
+      line-height:1.7;
+    }
+
+    .cg-modal-actions{
+      display:grid;
+      gap:9px;
+    }
+
+    .cg-modal-bag,
+    .cg-modal-close-secondary{
+      width:100%;
+      padding:14px;
+      border-radius:14px;
+      font-weight:900;
+      cursor:pointer;
+    }
+
+    .cg-modal-bag{
+      border:0;
+      background:#e7b72b;
+      color:#1b1713;
+    }
+
+    .cg-modal-close-secondary{
+      border:1px solid rgba(0,0,0,.1);
+      background:#fff;
+      color:#28221d;
+    }
+
+    body.cg-modal-open{
+      overflow:hidden;
+    }
+
+    @media(min-width:700px){
+
+      .cg-product-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        gap:18px;
+      }
+
+      .cg-product-media{
+        height:300px;
+      }
+
+      .cg-product-info{
+        padding:19px 17px 17px;
+      }
+
+      .cg-product-name{
+        font-size:21px;
+      }
+
+      .cg-modal-content{
+        grid-template-columns:1.05fr .95fr;
+      }
+
+      .cg-modal-visual{
+        min-height:560px;
+      }
+
+      .cg-modal-details{
+        padding:55px 38px;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+      }
+
+      .cg-modal-details h2{
+        font-size:44px;
+      }
+
+      .cg-modal-actions{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(min-width:1050px){
+
+      .cg-product-grid{
+        grid-template-columns:repeat(4,minmax(0,1fr));
+        gap:22px;
+      }
+
+      .cg-product-media{
+        height:330px;
+      }
+
+      .cg-product-card{
+        border-radius:25px;
+      }
+    }
+
+    @media(max-width:699px){
+
+      .cg-product-overlay{
+        transform:none;
+        opacity:1;
+      }
+
+      .cg-quick-view{
+        padding:10px;
+        font-size:10px;
+        background:rgba(30,26,23,.88);
+        backdrop-filter:blur(8px);
+      }
+
+      .cg-product-media{
+        height:205px;
+      }
+
+      .cg-product-bottom{
+        align-items:stretch;
+        flex-direction:column;
+      }
+
+      .cg-add-bag{
+        width:100%;
+      }
+
+      .cg-modal-box{
+        border-radius:24px;
+      }
+
+      .cg-modal-visu
 </body>
             </html>
