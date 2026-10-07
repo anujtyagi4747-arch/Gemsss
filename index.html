@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+  name="theme-color"
+  content="#fbfaf6"
+>
+
+<meta
+  name="description"
+  content="Ceremonial Gems — Natural gemstones, exceptional colour and timeless beauty."
+>
+
+<title>Ceremonial Gems — Natural Gemstones</title>
+
+<!-- Premium Editorial Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+  rel="stylesheet"
+>
+
+<style>
+
+/* =========================================================
+   CEREMONIAL GEMS
+   PART 1 — FOUNDATION
+   ========================================================= */
+
+:root{
+
+  --ivory:#fbfaf6;
+  --white:#ffffff;
+  --paper:#f4efe5;
+
+  --ink:#171717;
+  --soft-ink:#393630;
+  --muted:#7c776e;
+
+  --gold:#c89a48;
+  --gold-light:#e8cf9c;
+
+  --emerald:#087d65;
+  --emerald-light:#d8eee7;
+
+  --ruby:#c93655;
+  --ruby-light:#f7dfe5;
+
+  --sapphire:#3569d4;
+  --sapphire-light:#e1e9fb;
+
+  --yellow:#e2ad32;
+  --yellow-light:#f8edc9;
+
+  --pink:#dc7095;
+  --pink-light:#f8e3eb;
+
+  --purple:#8060c4;
+  --purple-light:#ebe4f8;
+
+  --orange:#df7a40;
+
+  --line:rgba(23,23,23,.09);
+
+  --radius-sm:14px;
+  --radius-md:22px;
+  --radius-lg:32px;
+
+  --container:1440px;
+
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+
+
+/* ---------------------------------------------------------
+   RESET
+   --------------------------------------------------------- */
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html{
+  margin:0;
+  padding:0;
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+
+  min-width:320px;
+
+  background:var(--ivory);
+  color:var(--ink);
+
+  font-family:"DM Sans",sans-serif;
+
+  overflow-x:hidden;
+
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+body,
+button,
+input,
+textarea,
+select{
+  font-family:"DM Sans",sans-serif;
+}
+
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
+}
+
+button{
+  border:0;
+  cursor:pointer;
+}
+
+a{
+  color:inherit;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+iframe{
+  display:block;
+}
+
+
+/* ---------------------------------------------------------
+   SELECTION
+   --------------------------------------------------------- */
+
+::selection{
+  background:var(--gold);
+  color:#fff;
+}
+
+
+/* ---------------------------------------------------------
+   SCROLLBAR
+   --------------------------------------------------------- */
+
+::-webkit-scrollbar{
+  width:7px;
+}
+
+::-webkit-scrollbar-track{
+  background:var(--ivory);
+}
+
+::-webkit-scrollbar-thumb{
+  background:#c9b58c;
+  border-radius:20px;
+}
+
+
+/* ---------------------------------------------------------
+   GLOBAL CONTAINER
+   --------------------------------------------------------- */
+
+.cg-container{
+  width:min(
+    calc(100% - 32px),
+    var(--container)
+  );
+
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+/* ---------------------------------------------------------
+   TOP ANNOUNCEMENT BAR
+   --------------------------------------------------------- */
+
+.cg-topbar{
+
+  position:relative;
+
+  width:100%;
+
+  min-height:34px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:
+    8px
+    16px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f5dfaa 0%,
+      #f7edcf 42%,
+      #e5f0e9 100%
+    );
+
+  color:#514936;
+
+  font-size:9px;
+  font-weight:700;
+
+  letter-spacing:.16em;
+  text-transform:uppercase;
+
+  text-align:center;
+}
+
+.cg-topbar-dot{
+  display:inline-block;
+
+  width:5px;
+  height:5px;
+
+  margin:0 8px;
+
+  border-radius:50%;
+
+  background:var(--emerald);
+}
+
+
+/* ---------------------------------------------------------
+   MAIN NAVIGATION
+   --------------------------------------------------------- */
+
+.cg-nav{
+
+  position:sticky;
+  top:0;
+
+  z-index:1000;
+
+  width:100%;
+
+  background:
+    rgba(255,255,255,.88);
+
+  border-bottom:
+    1px solid
+    rgba(23,23,23,.07);
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+
+.cg-nav-inner{
+
+  width:min(
+    calc(100% - 28px),
+    var(--container)
+  );
+
+  min-height:68px;
+
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:18px;
+}
+
+
+/* ---------------------------------------------------------
+   LOGO
+   --------------------------------------------------------- */
+
+.cg-logo{
+
+  display:flex;
+  align-items:center;
+
+  gap:10px;
+
+  text-decoration:none;
+
+  flex-shrink:0;
+}
+
+.cg-logo-mark{
+
+  position:relative;
+
+  width:30px;
+  height:30px;
+
+  transform:rotate(45deg);
+
+  border:
+    1px solid
+    rgba(200,154,72,.55);
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8e4ae,
+      #fff 45%,
+      #d6b66d
+    );
+
+  box-shadow:
+    inset 3px 3px 7px rgba(255,255,255,.8),
+    0 5px 15px rgba(200,154,72,.16);
+}
+
+.cg-logo-mark::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:7px;
+
+  border:
+    1px solid
+    rgba(200,154,72,.55);
+}
+
+.cg-logo-copy{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+
+.cg-logo-name{
+
+  font-family:"Playfair Display",serif;
+
+  font-size:17px;
+  font-weight:500;
+
+  letter-spacing:-.02em;
+
+  white-space:nowrap;
+}
+
+.cg-logo-sub{
+
+  margin-top:4px;
+
+  font-size:7px;
+  font-weight:700;
+
+  letter-spacing:.18em;
+
+  color:#8a8174;
+
+  text-transform:uppercase;
+}
+
+
+/* ---------------------------------------------------------
+   DESKTOP NAV LINKS
+   --------------------------------------------------------- */
+
+.cg-nav-links{
+
+  display:none;
+
+  align-items:center;
+
+  gap:30px;
+}
+
+.cg-nav-links a{
+
+  position:relative;
+
+  padding:25px 0;
+
+  color:#514d46;
+
+  text-decoration:none;
+
+  font-size:10px;
+  font-weight:700;
+
+  letter-spacing:.10em;
+
+  text-transform:uppercase;
+}
+
+.cg-nav-links a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:17px;
+
+  width:0;
+  height:1px;
+
+  background:var(--gold);
+
+  transition:
+    width .4s var(--ease);
+}
+
+.cg-nav-links a:hover::after{
+  width:100%;
+}
+
+
+/* ---------------------------------------------------------
+   NAV ACTIONS
+   --------------------------------------------------------- */
+
+.cg-nav-actions{
+
+  display:flex;
+  align-items:center;
+
+  gap:7px;
+}
+
+.cg-nav-action{
+
+  width:36px;
+  height:36px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:#f5f2eb;
+
+  color:#26231f;
+
+  transition:
+    transform .35s var(--ease),
+    background .35s var(--ease);
+}
+
+.cg-nav-action:hover{
+
+  transform:translateY(-2px);
+
+  background:#ebe4d7;
+}
+
+.cg-nav-action svg{
+
+  width:15px;
+  height:15px;
+
+  stroke:currentColor;
+  fill:none;
+
+  stroke-width:1.6;
+
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE MENU BUTTON
+   --------------------------------------------------------- */
+
+.cg-menu-btn{
+
+  width:38px;
+  height:38px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  flex-direction:column;
+
+  gap:5px;
+
+  border-radius:50%;
+
+  background:var(--ink);
+}
+
+.cg-menu-btn span{
+
+  width:14px;
+  height:1px;
+
+  background:#fff;
+
+  transition:
+    transform .35s var(--ease);
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media(min-width:700px){
+
+  .cg-container{
+    width:min(
+      calc(100% - 48px),
+      var(--container)
+    );
+  }
+
+  .cg-nav-inner{
+    width:min(
+      calc(100% - 48px),
+      var(--container)
+    );
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   DESKTOP
+   --------------------------------------------------------- */
+
+@media(min-width:980px){
+
+  .cg-nav-inner{
+    min-height:76px;
+  }
+
+  .cg-nav-links{
+    display:flex;
+  }
+
+  .cg-menu-btn{
+    display:none;
+  }
+
+  .cg-logo-mark{
+    width:34px;
+    height:34px;
+  }
+
+  .cg-logo-name{
+    font-size:19px;
+  }
+
+  .cg-nav-action{
+    width:38px;
+    height:38px;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   SMALL MOBILE
+   --------------------------------------------------------- */
+
+@media(max-width:390px){
+
+  .cg-topbar{
+    font-size:8px;
+    letter-spacing:.11em;
+  }
+
+  .cg-nav-inner{
+    width:calc(100% - 20px);
+    gap:8px;
+  }
+
+  .cg-logo-mark{
+    width:27px;
+    height:27px;
+  }
+
+  .cg-logo-name{
+    font-size:15px;
+  }
+
+  .cg-logo-sub{
+    font-size:6px;
+  }
+
+  .cg-nav-actions{
+    gap:5px;
+  }
+
+  .cg-nav-action{
+    width:33px;
+    height:33px;
+  }
+
+  .cg-menu-btn{
+    width:35px;
+    height:35px;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   ACCESSIBILITY
+   --------------------------------------------------------- */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =======================================================
+     TOP BAR
+     ======================================================= -->
+
+<div class="cg-topbar">
+  Natural Gemstones
+  <span class="cg-topbar-dot"></span>
+  Exceptional Colour
+  <span class="cg-topbar-dot"></span>
+  Worldwide Selection
+</div>
+
+
+<!-- =======================================================
+     NAVIGATION
+     ======================================================= -->
+
+<header class="cg-nav">
+
+  <div class="cg-nav-inner">
+
+    <a
+      href="#home"
+      class="cg-logo"
+      aria-label="Ceremonial Gems Home"
+    >
+
+      <span class="cg-logo-mark"></span>
+
+      <span class="cg-logo-copy">
+
+        <span class="cg-logo-name">
+          Ceremonial Gems
+        </span>
+
+        <span class="cg-logo-sub">
+          We Serve Memories
+        </span>
+
+      </span>
+
+    </a>
+
+
+    <nav class="cg-nav-links">
+
+      <a href="#collections">
+        Collections
+      </a>
+
+      <a href="#gemstones">
+        Gemstones
+      </a>
+
+      <a href="#origins">
+        Origins
+      </a>
+
+      <a href="#story">
+        Our Story
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </nav>
+
+
+    <div class="cg-nav-actions">
+
+      <!-- Search -->
+
+      <button
+        class="cg-nav-action"
+        type="button"
+        aria-label="Search"
+      >
+
+        <svg viewBox="0 0 24 24">
+          <circle cx="10.8" cy="10.8" r="6.8"></circle>
+          <path d="M16 16l5 5"></path>
+        </svg>
+
+      </button>
+
+
+      <!-- Wishlist -->
+
+      <button
+        class="cg-nav-action"
+        type="button"
+        aria-label="Wishlist"
+      >
+
+        <svg viewBox="0 0 24 24">
+          <path d="
+            M20.8 8.7
+            c0 5.5-8.8 10.3-8.8 10.3
+            S3.2 14.2 3.2 8.7
+            A4.7 4.7 0 0 1 12 6.2
+            a4.7 4.7 0 0 1 8.8 2.5Z
+          "></path>
+        </svg>
+
+      </button>
+
+
+      <!-- Bag -->
+
+      <button
+        class="cg-nav-action"
+        type="button"
+        aria-label="Shopping bag"
+      >
+
+        <svg viewBox="0 0 24 24">
+
+          <path d="
+            M5 8.5h14
+            l1 12H4l1-12Z
+          "></path>
+
+          <path d="
+            M8.5 8.5V6
+            a3.5 3.5 0 0 1 7 0v2.5
+          "></path>
+
+        </svg>
+
+      </button>
+
+
+      <!-- Mobile menu -->
+
+      <button
+        class="cg-menu-btn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =======================================================
+     MAIN
+     ======================================================= -->
+
+<main id="home">
+
+  <!--
+    PART 2 WILL START HERE
+    HERO + YOUTUBE GEMSTONE VIDEO
+  -->
+
+</main>
+
+
+<!-- =======================================================
+     PART 1 BASIC JS
+     ======================================================= -->
+
+<script>
+
+(function(){
+
+  "use strict";
+
+
+  /* -------------------------------------------------------
+     MOBILE MENU STATE
+     ------------------------------------------------------- */
+
+  const menuButton =
+    document.querySelector(".cg-menu-btn");
+
+
+  if(menuButton){
+
+    menuButton.addEventListener(
+      "click",
+      function(){
+
+        const opened =
+          menuButton.getAttribute(
+            "aria-expanded"
+          ) === "true";
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          String(!opened)
+        );
+
+      }
+    );
+
+  }
+
+
+  /* -------------------------------------------------------
+     PREVENT BROKEN HASH JUMPS
+     ------------------------------------------------------- */
+
+  document
+    .querySelectorAll(
+      'a[href^="#"]'
+    )
+    .forEach(function(link){
+
+      link.addEventListener(
+        "click",
+        function(event){
+
+          const id =
+            link.getAttribute("href");
+
+          if(
+            !id ||
+            id === "#" ||
+            !document.querySelector(id)
+          ){
+            return;
+          }
+
+          event.preventDefault();
+
+          document
+            .querySelector(id)
+            .scrollIntoView({
+              behavior:"smooth",
+              block:"start"
+            });
+
+        }
+      );
+
+    });
+
+})();
+
+</script>
+
+</body>
+            </html>
