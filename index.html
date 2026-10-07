@@ -896,6 +896,808 @@ iframe{
 })();
 
 </script>
+<!-- =========================================================
+     CEREMONIAL GEMS — PART 2 FINAL
+     YOUTUBE CINEMATIC HERO
+     VIDEO ID: NJ-e6tf4hrY
+     ========================================================= -->
 
+<script>
+(function(){
+
+  /* Remove previous PART 2 if it exists */
+  document.querySelectorAll('.cg-hero').forEach(function(el){
+    el.remove();
+  });
+
+  document.querySelectorAll('#cg-part-2-style').forEach(function(el){
+    el.remove();
+  });
+
+
+  /* ---------- CSS ---------- */
+
+  const style = document.createElement('style');
+
+  style.id = 'cg-part-2-style';
+
+  style.textContent = `
+
+  .cg-hero{
+    position:relative;
+    width:100%;
+    min-height:calc(100svh - 74px);
+    overflow:hidden;
+    isolation:isolate;
+    background:#f5f0e6;
+    color:#171511;
+    display:flex;
+    align-items:center;
+  }
+
+  .cg-hero-video{
+    position:absolute;
+    inset:0;
+    z-index:-5;
+    overflow:hidden;
+    background:#e9dfcf;
+  }
+
+  .cg-hero-video iframe{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:177.78vh;
+    height:100vh;
+    min-width:100%;
+    min-height:56.25vw;
+    transform:translate(-50%,-50%) scale(1.12);
+    border:0;
+    pointer-events:none;
+  }
+
+  .cg-video-fallback{
+    position:absolute;
+    inset:0;
+    z-index:-7;
+    background:
+      radial-gradient(circle at 75% 22%,#d8ef72 0 4%,transparent 5%),
+      radial-gradient(circle at 86% 38%,#d82150 0 5%,transparent 6%),
+      radial-gradient(circle at 70% 57%,#2869bf 0 5%,transparent 6%),
+      radial-gradient(circle at 84% 72%,#efb51b 0 5%,transparent 6%),
+      linear-gradient(135deg,#fffdf8,#e9dfcf);
+  }
+
+  .cg-video-wash{
+    position:absolute;
+    inset:0;
+    z-index:-3;
+    pointer-events:none;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(250,247,240,.98) 0%,
+        rgba(250,247,240,.84) 28%,
+        rgba(250,247,240,.35) 62%,
+        rgba(250,247,240,.08) 100%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(247,241,231,.72),
+        transparent 48%
+      );
+  }
+
+  .cg-hero-inner{
+    position:relative;
+    z-index:5;
+    width:min(1240px,100%);
+    margin:auto;
+    padding:100px 28px 80px;
+  }
+
+  .cg-hero-kicker{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:22px;
+    font-family:"DM Sans",sans-serif;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.22em;
+  }
+
+  .cg-kicker-line{
+    width:42px;
+    height:1px;
+    background:#171511;
+  }
+
+  .cg-hero h1{
+    max-width:800px;
+    margin:0;
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:clamp(56px,9vw,128px);
+    line-height:.84;
+    letter-spacing:-.065em;
+    font-weight:500;
+  }
+
+  .cg-hero h1 span{
+    display:block;
+    color:#277343;
+  }
+
+  .cg-hero h1 strong{
+    display:block;
+    font-weight:500;
+  }
+
+  .cg-hero h1 em{
+    display:block;
+    margin-left:9%;
+    color:#d51e43;
+    font-style:italic;
+    font-weight:500;
+  }
+
+  .cg-hero-copy{
+    max-width:475px;
+    margin:30px 0 0;
+    font-family:"DM Sans",sans-serif;
+    font-size:15px;
+    line-height:1.75;
+    color:#48443d;
+  }
+
+  .cg-hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:30px;
+  }
+
+  .cg-btn{
+    min-height:52px;
+    padding:0 22px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    border-radius:999px;
+    text-decoration:none;
+    font-family:"DM Sans",sans-serif;
+    font-size:12px;
+    font-weight:800;
+    transition:.3s ease;
+  }
+
+  .cg-btn-primary{
+    background:#171511;
+    color:white;
+  }
+
+  .cg-btn-primary:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 40px rgba(0,0,0,.22);
+  }
+
+  .cg-btn-outline{
+    color:#171511;
+    border:1px solid rgba(23,21,17,.3);
+    background:rgba(255,255,255,.42);
+    backdrop-filter:blur(10px);
+  }
+
+  .cg-btn-outline:hover{
+    background:white;
+    transform:translateY(-4px);
+  }
+
+  .cg-hero-bottom{
+    display:flex;
+    gap:38px;
+    max-width:570px;
+    margin-top:60px;
+    padding-top:20px;
+    border-top:1px solid rgba(23,21,17,.16);
+  }
+
+  .cg-hero-stat{
+    display:flex;
+    gap:8px;
+    font-family:"DM Sans",sans-serif;
+  }
+
+  .cg-hero-stat b{
+    font-size:9px;
+    color:#777066;
+  }
+
+  .cg-hero-stat span{
+    font-size:9px;
+    line-height:1.4;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    font-weight:800;
+  }
+
+
+  /* GEM DECOR */
+
+  .cg-floating-gem{
+    position:absolute;
+    z-index:2;
+    border-radius:25% 75% 68% 32%;
+    transform:rotate(35deg);
+    pointer-events:none;
+    filter:drop-shadow(0 22px 25px rgba(0,0,0,.18));
+    animation:cgGemFloat 6s ease-in-out infinite;
+  }
+
+  .cg-gem-green{
+    width:105px;
+    height:92px;
+    top:17%;
+    right:12%;
+    background:linear-gradient(135deg,#e1ff78,#318c47 42%,#073d25);
+  }
+
+  .cg-gem-yellow{
+    width:58px;
+    height:58px;
+    bottom:17%;
+    right:29%;
+    background:linear-gradient(135deg,#fff8a5,#e4ae17 45%,#8f5d00);
+    animation-delay:-2s;
+  }
+
+  .cg-gem-pink{
+    width:50px;
+    height:50px;
+    top:34%;
+    right:5%;
+    background:linear-gradient(135deg,#ffd5e0,#d71952 45%,#690921);
+    animation-delay:-4s;
+  }
+
+  .cg-gem-blue{
+    width:68px;
+    height:68px;
+    bottom:27%;
+    right:10%;
+    background:linear-gradient(135deg,#bceaff,#2872cc 45%,#112a63);
+    animation-delay:-3s;
+  }
+
+  @keyframes cgGemFloat{
+    0%,100%{
+      margin-top:0;
+      rotate:0deg;
+    }
+    50%{
+      margin-top:-18px;
+      rotate:7deg;
+    }
+  }
+
+
+  /* AUTOPLAY BLOCKED BUTTON */
+
+  .cg-video-play{
+    position:absolute;
+    z-index:8;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:64px;
+    height:64px;
+    border:1px solid rgba(255,255,255,.7);
+    border-radius:50%;
+    background:rgba(20,20,18,.72);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    backdrop-filter:blur(12px);
+    opacity:0;
+    pointer-events:none;
+    transition:.3s ease;
+  }
+
+  .cg-video-play.active{
+    opacity:1;
+    pointer-events:auto;
+  }
+
+  .cg-video-play::after{
+    content:"";
+    margin-left:4px;
+    width:0;
+    height:0;
+    border-top:9px solid transparent;
+    border-bottom:9px solid transparent;
+    border-left:13px solid white;
+  }
+
+
+  /* SCROLL */
+
+  .cg-scroll-indicator{
+    position:absolute;
+    right:25px;
+    bottom:32px;
+    z-index:5;
+    transform:rotate(90deg);
+    transform-origin:right center;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-family:"DM Sans",sans-serif;
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:.18em;
+  }
+
+  .cg-scroll-indicator i{
+    width:48px;
+    height:1px;
+    background:#444;
+    display:block;
+  }
+
+
+  /* TABLET */
+
+  @media(max-width:900px){
+
+    .cg-hero-inner{
+      padding:80px 24px;
+    }
+
+    .cg-hero-video iframe{
+      transform:
+        translate(-50%,-50%)
+        scale(1.18);
+    }
+
+    .cg-video-wash{
+      background:
+        linear-gradient(
+          90deg,
+          rgba(250,247,240,.97),
+          rgba(250,247,240,.68) 50%,
+          rgba(250,247,240,.15)
+        );
+    }
+
+  }
+
+
+  /* MOBILE */
+
+  @media(max-width:600px){
+
+    .cg-hero{
+      min-height:calc(100svh - 64px);
+      align-items:flex-end;
+    }
+
+    .cg-hero-video iframe{
+      width:177.78vh;
+      height:100vh;
+      transform:
+        translate(-50%,-50%)
+        scale(1.32);
+    }
+
+    .cg-video-wash{
+      background:
+        linear-gradient(
+          180deg,
+          rgba(250,247,240,.18),
+          rgba(250,247,240,.48) 35%,
+          rgba(250,247,240,.94) 72%,
+          #f5f0e6 100%
+        );
+    }
+
+    .cg-hero-inner{
+      padding:90px 20px 34px;
+    }
+
+    .cg-hero-kicker{
+      font-size:8px;
+      margin-bottom:18px;
+    }
+
+    .cg-kicker-line{
+      width:28px;
+    }
+
+    .cg-hero h1{
+      font-size:clamp(52px,16vw,82px);
+      line-height:.86;
+    }
+
+    .cg-hero-copy{
+      max-width:360px;
+      margin-top:22px;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    .cg-hero-actions{
+      margin-top:22px;
+      gap:9px;
+    }
+
+    .cg-btn{
+      min-height:48px;
+      padding:0 17px;
+      font-size:10px;
+    }
+
+    .cg-hero-bottom{
+      gap:18px;
+      margin-top:32px;
+    }
+
+    .cg-hero-stat b{
+      font-size:7px;
+    }
+
+    .cg-hero-stat span{
+      font-size:7px;
+    }
+
+    .cg-gem-green{
+      width:70px;
+      height:62px;
+      top:13%;
+      right:4%;
+    }
+
+    .cg-gem-pink{
+      width:34px;
+      height:34px;
+      top:27%;
+      right:5%;
+    }
+
+    .cg-gem-blue{
+      width:44px;
+      height:44px;
+      bottom:34%;
+      right:7%;
+    }
+
+    .cg-gem-yellow{
+      width:38px;
+      height:38px;
+      bottom:23%;
+      right:27%;
+    }
+
+    .cg-scroll-indicator{
+      display:none;
+    }
+
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    .cg-floating-gem{
+      animation:none;
+    }
+  }
+
+  `;
+
+  document.head.appendChild(style);
+
+
+  /* ---------- HERO ---------- */
+
+  const hero = document.createElement('section');
+
+  hero.className = 'cg-hero';
+
+  hero.id = 'cgHero';
+
+  hero.innerHTML = `
+
+    <div class="cg-hero-video">
+
+      <div class="cg-video-fallback"></div>
+
+      <iframe
+        id="cgYouTubePlayer"
+        title="Ceremonial Gems"
+        src="https://www.youtube-nocookie.com/embed/NJ-e6tf4hrY?autoplay=1&mute=1&loop=1&playlist=NJ-e6tf4hrY&controls=0&playsinline=1&rel=0&enablejsapi=1"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+
+    <div class="cg-video-wash"></div>
+
+    <button
+      type="button"
+      class="cg-video-play"
+      id="cgVideoPlay"
+      aria-label="Play gemstone video">
+    </button>
+
+    <div class="cg-floating-gem cg-gem-green"></div>
+    <div class="cg-floating-gem cg-gem-yellow"></div>
+    <div class="cg-floating-gem cg-gem-pink"></div>
+    <div class="cg-floating-gem cg-gem-blue"></div>
+
+    <div class="cg-hero-inner">
+
+      <div class="cg-hero-kicker">
+        <span class="cg-kicker-line"></span>
+        NATURAL • RARE • TIMELESS
+      </div>
+
+      <h1>
+        <span>Colour</span>
+        <strong>Born From</strong>
+        <em>Earth.</em>
+      </h1>
+
+      <p class="cg-hero-copy">
+        Discover a vivid world of natural gemstones,
+        exceptional colour and timeless character —
+        carefully selected for those who see beauty differently.
+      </p>
+
+      <div class="cg-hero-actions">
+
+        <a
+          href="#collections"
+          class="cg-btn cg-btn-primary">
+          Explore Gemstones <span>↗</span>
+        </a>
+
+        <a
+          href="#our-story"
+          class="cg-btn cg-btn-outline">
+          Our Story
+        </a>
+
+      </div>
+
+      <div class="cg-hero-bottom">
+
+        <div class="cg-hero-stat">
+          <b>01</b>
+          <span>Natural<br>Gemstones</span>
+        </div>
+
+        <div class="cg-hero-stat">
+          <b>02</b>
+          <span>Rare<br>Colours</span>
+        </div>
+
+        <div class="cg-hero-stat">
+          <b>03</b>
+          <span>Curated<br>Collections</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="cg-scroll-indicator">
+      <span>SCROLL TO EXPLORE</span>
+      <i></i>
+    </div>
+
+  `;
+
+
+  /* Put hero directly after navigation */
+
+  const nav = document.querySelector('.cg-nav');
+
+  if(nav){
+
+    nav.insertAdjacentElement(
+      'afterend',
+      hero
+    );
+
+  }else{
+
+    document.body.prepend(hero);
+
+  }
+
+
+  /* ---------- YOUTUBE API ---------- */
+
+  let cgPlayer = null;
+
+  let cgPlaying = false;
+
+  const playButton =
+    document.getElementById('cgVideoPlay');
+
+  const iframe =
+    document.getElementById('cgYouTubePlayer');
+
+
+  function loadYouTubeAPI(){
+
+    if(window.YT && window.YT.Player){
+
+      createPlayer();
+
+      return;
+
+    }
+
+    const old =
+      document.querySelector(
+        'script[data-cg-youtube-api]'
+      );
+
+    if(!old){
+
+      const api =
+        document.createElement('script');
+
+      api.src =
+        'https://www.youtube.com/iframe_api';
+
+      api.async = true;
+
+      api.dataset.cgYoutubeApi = 'true';
+
+      document.head.appendChild(api);
+
+    }
+
+    const previous =
+      window.onYouTubeIframeAPIReady;
+
+    window.onYouTubeIframeAPIReady =
+      function(){
+
+        if(typeof previous === 'function'){
+          previous();
+        }
+
+        createPlayer();
+
+      };
+
+  }
+
+
+  function createPlayer(){
+
+    if(cgPlayer || !window.YT){
+      return;
+    }
+
+    try{
+
+      cgPlayer =
+        new YT.Player(
+          'cgYouTubePlayer',
+          {
+            events:{
+              onReady:function(event){
+
+                try{
+
+                  event.target.mute();
+
+                  event.target.playVideo();
+
+                }catch(e){}
+
+              },
+
+              onStateChange:function(event){
+
+                if(
+                  event.data ===
+                  YT.PlayerState.PLAYING
+                ){
+
+                  cgPlaying = true;
+
+                  playButton.classList.remove(
+                    'active'
+                  );
+
+                }
+
+                if(
+                  event.data ===
+                  YT.PlayerState.ENDED
+                ){
+
+                  try{
+                    event.target.playVideo();
+                  }catch(e){}
+
+                }
+
+              },
+
+              onAutoplayBlocked:function(){
+
+                cgPlaying = false;
+
+                playButton.classList.add(
+                  'active'
+                );
+
+              }
+            },
+
+            playerVars:{
+              autoplay:1,
+              mute:1,
+              controls:0,
+              loop:1,
+              playlist:'NJ-e6tf4hrY',
+              playsinline:1,
+              rel:0
+            }
+          }
+        );
+
+    }catch(error){
+
+      playButton.classList.add(
+        'active'
+      );
+
+    }
+
+  }
+
+
+  /* ---------- MANUAL PLAY FALLBACK ---------- */
+
+  playButton.addEventListener(
+    'click',
+    function(){
+
+      if(!cgPlayer){
+        loadYouTubeAPI();
+        return;
+      }
+
+      try{
+
+        cgPlayer.mute();
+
+        cgPlayer.playVideo();
+
+        playButton.classList.remove(
+          'active'
+        );
+
+      }catch(error){}
+
+    }
+  );
+
+
+  /* ---------- START VIDEO ---------- */
+
+  loadYouTubeAPI();
+
+
+})();
+                                                </script>
 </body>
             </html>
