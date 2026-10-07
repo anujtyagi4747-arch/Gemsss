@@ -1699,5 +1699,903 @@ iframe{
 
 })();
                                                 </script>
+  <!-- =========================================================
+     CEREMONIAL GEMS — PART 3
+     GEMSTONE COLLECTIONS
+     Paste directly below PART 2
+     ========================================================= -->
+
+<script>
+(function(){
+
+  /* ---------- PART 3 CSS ---------- */
+
+  const style = document.createElement("style");
+
+  style.id = "cg-part-3-style";
+
+  style.textContent = `
+
+  .cg-collections{
+    position:relative;
+    overflow:hidden;
+    background:#fffdf9;
+    padding:100px 0 110px;
+    color:#171511;
+  }
+
+  .cg-collections-inner{
+    width:min(1240px,100%);
+    margin:auto;
+    padding:0 28px;
+  }
+
+  .cg-section-top{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:30px;
+    margin-bottom:48px;
+  }
+
+  .cg-section-label{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    margin-bottom:16px;
+    font-family:"DM Sans",sans-serif;
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:.2em;
+    color:#6d685f;
+  }
+
+  .cg-section-label i{
+    display:block;
+    width:34px;
+    height:1px;
+    background:#171511;
+  }
+
+  .cg-section-title{
+    margin:0;
+    max-width:680px;
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:clamp(45px,6vw,82px);
+    line-height:.91;
+    letter-spacing:-.055em;
+    font-weight:500;
+  }
+
+  .cg-section-title em{
+    color:#c91e43;
+    font-style:italic;
+  }
+
+  .cg-section-description{
+    max-width:350px;
+    margin:0 0 4px;
+    font-family:"DM Sans",sans-serif;
+    font-size:13px;
+    line-height:1.7;
+    color:#716b62;
+  }
+
+
+  /* ---------- COLLECTION GRID ---------- */
+
+  .cg-collection-grid{
+    display:grid;
+    grid-template-columns:
+      repeat(4,minmax(0,1fr));
+    gap:14px;
+  }
+
+  .cg-collection-card{
+    position:relative;
+    min-height:430px;
+    overflow:hidden;
+    border-radius:28px;
+    text-decoration:none;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:25px;
+    isolation:isolate;
+    transition:
+      transform .45s cubic-bezier(.2,.8,.2,1),
+      box-shadow .45s ease;
+  }
+
+  .cg-collection-card:hover{
+    transform:translateY(-9px);
+    box-shadow:
+      0 28px 60px rgba(23,21,17,.17);
+  }
+
+  .cg-collection-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-2;
+    transition:transform .7s cubic-bezier(.2,.8,.2,1);
+  }
+
+  .cg-collection-card:hover::before{
+    transform:scale(1.08);
+  }
+
+  .cg-collection-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    background:
+      linear-gradient(
+        180deg,
+        transparent 25%,
+        rgba(0,0,0,.05) 42%,
+        rgba(0,0,0,.72) 100%
+      );
+  }
+
+
+  /* RUBY */
+
+  .cg-card-ruby::before{
+    background:
+      radial-gradient(
+        ellipse at 52% 35%,
+        #ff718d 0 5%,
+        transparent 6%
+      ),
+      radial-gradient(
+        ellipse at 35% 28%,
+        #ef3158 0 8%,
+        transparent 9%
+      ),
+      radial-gradient(
+        ellipse at 68% 55%,
+        #8c092c 0 15%,
+        transparent 16%
+      ),
+      linear-gradient(
+        135deg,
+        #ff4b6d,
+        #870824 72%,
+        #3e0617
+      );
+  }
+
+
+  /* EMERALD */
+
+  .cg-card-emerald::before{
+    background:
+      radial-gradient(
+        ellipse at 65% 30%,
+        #b7ff76 0 6%,
+        transparent 7%
+      ),
+      radial-gradient(
+        ellipse at 30% 60%,
+        #36c86d 0 9%,
+        transparent 10%
+      ),
+      radial-gradient(
+        ellipse at 70% 65%,
+        #075d32 0 16%,
+        transparent 17%
+      ),
+      linear-gradient(
+        135deg,
+        #65db72,
+        #08713b 60%,
+        #033c26
+      );
+  }
+
+
+  /* SAPPHIRE */
+
+  .cg-card-sapphire::before{
+    background:
+      radial-gradient(
+        ellipse at 42% 26%,
+        #9eeaff 0 6%,
+        transparent 7%
+      ),
+      radial-gradient(
+        ellipse at 72% 52%,
+        #438be5 0 11%,
+        transparent 12%
+      ),
+      radial-gradient(
+        ellipse at 30% 72%,
+        #102d78 0 17%,
+        transparent 18%
+      ),
+      linear-gradient(
+        135deg,
+        #398ee4,
+        #174ea0 55%,
+        #071d55
+      );
+  }
+
+
+  /* TOURMALINE */
+
+  .cg-card-tourmaline::before{
+    background:
+      radial-gradient(
+        ellipse at 58% 25%,
+        #ffbd64 0 5%,
+        transparent 6%
+      ),
+      radial-gradient(
+        ellipse at 38% 42%,
+        #ef447c 0 9%,
+        transparent 10%
+      ),
+      radial-gradient(
+        ellipse at 68% 67%,
+        #67278e 0 16%,
+        transparent 17%
+      ),
+      linear-gradient(
+        135deg,
+        #ff9b42,
+        #d73570 44%,
+        #542172 80%
+      );
+  }
+
+
+  .cg-card-number{
+    position:absolute;
+    top:21px;
+    left:23px;
+    font-family:"DM Sans",sans-serif;
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.14em;
+    opacity:.72;
+  }
+
+  .cg-card-orbit{
+    position:absolute;
+    width:155px;
+    height:155px;
+    border:1px solid rgba(255,255,255,.28);
+    border-radius:50%;
+    top:26%;
+    left:50%;
+    transform:
+      translate(-50%,-50%)
+      rotate(-18deg);
+  }
+
+  .cg-card-orbit::after{
+    content:"";
+    position:absolute;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:white;
+    top:10px;
+    right:27px;
+    box-shadow:
+      0 0 18px rgba(255,255,255,.8);
+  }
+
+
+  .cg-card-content{
+    position:relative;
+    z-index:4;
+  }
+
+  .cg-card-small{
+    display:block;
+    margin-bottom:7px;
+    font-family:"DM Sans",sans-serif;
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    opacity:.75;
+  }
+
+  .cg-card-title{
+    margin:0;
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:34px;
+    line-height:.95;
+    font-weight:500;
+  }
+
+  .cg-card-sub{
+    margin-top:10px;
+    font-family:"DM Sans",sans-serif;
+    font-size:10px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    opacity:.78;
+  }
+
+  .cg-card-arrow{
+    position:absolute;
+    right:22px;
+    bottom:22px;
+    width:40px;
+    height:40px;
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:15px;
+    transition:
+      background .3s ease,
+      transform .3s ease;
+  }
+
+  .cg-collection-card:hover
+  .cg-card-arrow{
+    background:rgba(255,255,255,.18);
+    transform:rotate(45deg);
+  }
+
+
+  /* ---------- WIDE FEATURE CARD ---------- */
+
+  .cg-collection-feature{
+    position:relative;
+    margin-top:14px;
+    min-height:310px;
+    border-radius:28px;
+    overflow:hidden;
+    background:
+      linear-gradient(
+        110deg,
+        #f2d66c,
+        #e4a929 43%,
+        #ba651f
+      );
+    color:#171511;
+    display:flex;
+    align-items:center;
+    padding:42px;
+    isolation:isolate;
+  }
+
+  .cg-feature-glow{
+    position:absolute;
+    width:390px;
+    height:390px;
+    right:-60px;
+    top:-100px;
+    border-radius:50%;
+    background:
+      radial-gradient(
+        circle,
+        rgba(255,255,255,.78),
+        rgba(255,255,255,0) 68%
+      );
+    z-index:-1;
+  }
+
+  .cg-feature-gem{
+    position:absolute;
+    right:15%;
+    top:50%;
+    width:150px;
+    height:125px;
+    transform:
+      translateY(-50%)
+      rotate(25deg);
+    border-radius:
+      30% 70% 55% 45%;
+    background:
+      linear-gradient(
+        135deg,
+        #fff6aa,
+        #f1b51b 40%,
+        #9b5d00
+      );
+    box-shadow:
+      inset -20px -20px 35px rgba(92,50,0,.25),
+      0 30px 50px rgba(80,44,0,.2);
+    animation:
+      cgFeatureGemFloat
+      6s
+      ease-in-out
+      infinite;
+  }
+
+  .cg-feature-gem::after{
+    content:"";
+    position:absolute;
+    inset:16%;
+    border-radius:inherit;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255,255,255,.8),
+        transparent 35%
+      );
+  }
+
+  @keyframes cgFeatureGemFloat{
+
+    0%,100%{
+      margin-top:0;
+      rotate:25deg;
+    }
+
+    50%{
+      margin-top:-12px;
+      rotate:32deg;
+    }
+
+  }
+
+  .cg-feature-copy{
+    max-width:520px;
+  }
+
+  .cg-feature-copy small{
+    display:block;
+    margin-bottom:13px;
+    font-family:"DM Sans",sans-serif;
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:.2em;
+  }
+
+  .cg-feature-copy h3{
+    margin:0;
+    font-family:"Playfair Display",Georgia,serif;
+    font-size:clamp(34px,4vw,58px);
+    line-height:.95;
+    letter-spacing:-.04em;
+    font-weight:500;
+  }
+
+  .cg-feature-copy p{
+    max-width:410px;
+    margin:17px 0 0;
+    font-family:"DM Sans",sans-serif;
+    font-size:12px;
+    line-height:1.7;
+    color:rgba(23,21,17,.7);
+  }
+
+  .cg-feature-button{
+    display:inline-flex;
+    margin-top:22px;
+    min-height:44px;
+    padding:0 19px;
+    align-items:center;
+    gap:10px;
+    border-radius:999px;
+    background:#171511;
+    color:white;
+    text-decoration:none;
+    font-family:"DM Sans",sans-serif;
+    font-size:10px;
+    font-weight:800;
+    transition:.3s ease;
+  }
+
+  .cg-feature-button:hover{
+    transform:translateY(-3px);
+  }
+
+
+  /* ---------- MOBILE ---------- */
+
+  @media(max-width:900px){
+
+    .cg-collection-grid{
+      grid-template-columns:
+        repeat(2,minmax(0,1fr));
+    }
+
+    .cg-collection-card{
+      min-height:390px;
+    }
+
+    .cg-collection-feature{
+      min-height:340px;
+    }
+
+    .cg-feature-gem{
+      right:7%;
+    }
+
+  }
+
+
+  @media(max-width:600px){
+
+    .cg-collections{
+      padding:74px 0 78px;
+    }
+
+    .cg-collections-inner{
+      padding:0 18px;
+    }
+
+    .cg-section-top{
+      display:block;
+      margin-bottom:30px;
+    }
+
+    .cg-section-title{
+      font-size:
+        clamp(43px,13vw,64px);
+    }
+
+    .cg-section-description{
+      margin-top:19px;
+      font-size:12px;
+    }
+
+    .cg-collection-grid{
+      grid-template-columns:1fr 1fr;
+      gap:9px;
+    }
+
+    .cg-collection-card{
+      min-height:290px;
+      border-radius:20px;
+      padding:17px;
+    }
+
+    .cg-card-title{
+      font-size:27px;
+    }
+
+    .cg-card-small{
+      font-size:7px;
+    }
+
+    .cg-card-sub{
+      font-size:7px;
+      line-height:1.35;
+    }
+
+    .cg-card-number{
+      top:15px;
+      left:16px;
+      font-size:7px;
+    }
+
+    .cg-card-arrow{
+      width:32px;
+      height:32px;
+      right:13px;
+      bottom:13px;
+      font-size:12px;
+    }
+
+    .cg-card-orbit{
+      width:100px;
+      height:100px;
+    }
+
+    .cg-collection-feature{
+      margin-top:9px;
+      min-height:420px;
+      padding:26px 22px;
+      align-items:flex-end;
+      border-radius:20px;
+    }
+
+    .cg-feature-gem{
+      width:105px;
+      height:90px;
+      top:24%;
+      right:15%;
+    }
+
+    .cg-feature-copy h3{
+      font-size:42px;
+    }
+
+    .cg-feature-copy p{
+      font-size:11px;
+      max-width:290px;
+    }
+
+  }
+
+  `;
+
+  document.head.appendChild(style);
+
+
+  /* ---------- HTML ---------- */
+
+  const section =
+  document.createElement("section");
+
+  section.className =
+    "cg-collections";
+
+  section.id =
+    "collections";
+
+  section.innerHTML = `
+
+    <div class="cg-collections-inner">
+
+      <div class="cg-section-top">
+
+        <div>
+
+          <div class="cg-section-label">
+            <i></i>
+            THE COLLECTIONS
+          </div>
+
+          <h2 class="cg-section-title">
+            Nature's most
+            <em>vivid</em> colours.
+          </h2>
+
+        </div>
+
+        <p class="cg-section-description">
+          From deep ruby reds to electric greens,
+          ocean blues and sunset pinks — explore
+          gemstones selected for their natural
+          colour and character.
+        </p>
+
+      </div>
+
+
+      <div class="cg-collection-grid">
+
+
+        <!-- RUBY -->
+
+        <a
+          href="#products"
+          class="cg-collection-card cg-card-ruby"
+          data-gem-category="Ruby">
+
+          <span class="cg-card-number">
+            01 / RED
+          </span>
+
+          <span class="cg-card-orbit"></span>
+
+          <div class="cg-card-content">
+
+            <span class="cg-card-small">
+              Precious Stone
+            </span>
+
+            <h3 class="cg-card-title">
+              Ruby
+            </h3>
+
+            <div class="cg-card-sub">
+              Manik · Passion · Fire
+            </div>
+
+          </div>
+
+          <span class="cg-card-arrow">
+            ↗
+          </span>
+
+        </a>
+
+
+        <!-- EMERALD -->
+
+        <a
+          href="#products"
+          class="cg-collection-card cg-card-emerald"
+          data-gem-category="Emerald">
+
+          <span class="cg-card-number">
+            02 / GREEN
+          </span>
+
+          <span class="cg-card-orbit"></span>
+
+          <div class="cg-card-content">
+
+            <span class="cg-card-small">
+              Precious Stone
+            </span>
+
+            <h3 class="cg-card-title">
+              Emerald
+            </h3>
+
+            <div class="cg-card-sub">
+              Panna · Nature · Life
+            </div>
+
+          </div>
+
+          <span class="cg-card-arrow">
+            ↗
+          </span>
+
+        </a>
+
+
+        <!-- SAPPHIRE -->
+
+        <a
+          href="#products"
+          class="cg-collection-card cg-card-sapphire"
+          data-gem-category="Blue Sapphire">
+
+          <span class="cg-card-number">
+            03 / BLUE
+          </span>
+
+          <span class="cg-card-orbit"></span>
+
+          <div class="cg-card-content">
+
+            <span class="cg-card-small">
+              Precious Stone
+            </span>
+
+            <h3 class="cg-card-title">
+              Sapphire
+            </h3>
+
+            <div class="cg-card-sub">
+              Neelam · Depth · Sky
+            </div>
+
+          </div>
+
+          <span class="cg-card-arrow">
+            ↗
+          </span>
+
+        </a>
+
+
+        <!-- TOURMALINE -->
+
+        <a
+          href="#products"
+          class="cg-collection-card cg-card-tourmaline"
+          data-gem-category="Tourmaline">
+
+          <span class="cg-card-number">
+            04 / MULTI
+          </span>
+
+          <span class="cg-card-orbit"></span>
+
+          <div class="cg-card-content">
+
+            <span class="cg-card-small">
+              Natural Gem
+            </span>
+
+            <h3 class="cg-card-title">
+              Tourmaline
+            </h3>
+
+            <div class="cg-card-sub">
+              Colour · Energy · Character
+            </div>
+
+          </div>
+
+          <span class="cg-card-arrow">
+            ↗
+          </span>
+
+        </a>
+
+      </div>
+
+
+      <!-- FEATURE COLLECTION -->
+
+      <div class="cg-collection-feature">
+
+        <div class="cg-feature-glow"></div>
+
+        <div class="cg-feature-gem"></div>
+
+        <div class="cg-feature-copy">
+
+          <small>
+            BEYOND THE CLASSICS
+          </small>
+
+          <h3>
+            Rare stones.<br>
+            Unexpected colour.
+          </h3>
+
+          <p>
+            Explore our wider world of Pink Sapphire,
+            Tanzanite, Spinel, Opal, Agate and
+            naturally expressive collector gems.
+          </p>
+
+          <a
+            href="#products"
+            class="cg-feature-button">
+            View Full Collection
+            <span>↗</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  `;
+
+
+  /* ---------- INSERT ---------- */
+
+  const hero =
+    document.querySelector("#cgHero");
+
+  if(hero){
+
+    hero.insertAdjacentElement(
+      "afterend",
+      section
+    );
+
+  }else{
+
+    document.body.appendChild(section);
+
+  }
+
+
+  /* ---------- CARD CLICK ---------- */
+
+  section
+    .querySelectorAll(".cg-collection-card")
+    .forEach(function(card){
+
+      card.addEventListener(
+        "click",
+        function(){
+
+          const category =
+            card.dataset.gemCategory;
+
+          try{
+
+            sessionStorage.setItem(
+              "cgSelectedGemCategory",
+              category
+            );
+
+          }catch(e){}
+
+        }
+      );
+
+    });
+
+
+})();
+    </script>
 </body>
             </html>
